@@ -1,4 +1,10 @@
 @tailwind base;
+
+@layer base {
+    body {
+        @apply bg-base-background text-base-text;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
-

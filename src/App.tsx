@@ -2,7 +2,7 @@
 function App() {
   return (
     <>
-      <h1 className="text-2xl text-amber-800">Hello word!</h1>
+      <h1 className="">Hello word!</h1>
     </>
   )
 }
