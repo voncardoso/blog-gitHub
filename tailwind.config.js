@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      lineHeight: {
+        '160': '160%',
+      },
       colors: {
         'blue': '#3294F8',
         'base': {
