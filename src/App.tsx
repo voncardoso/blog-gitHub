@@ -1,8 +1,13 @@
+import { Header } from "./components/Header";
+import {Profile} from "./components/Profile";
 
 function App() {
   return (
     <>
-      <h1 className="text-2xl text-amber-800">Hello word!</h1>
+      <Header/>
+        <div className={"relative top-[-90px]"}>
+            <Profile />
+        </div>
     </>
   )
 }
