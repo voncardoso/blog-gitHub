@@ -7,7 +7,6 @@ const meta: Meta ={
     component: GridColors,
     parameters: {
         layout: 'centered',
-
     },
     tags: ['!autodocs'],
 } satisfies Meta<typeof GridColors>
