@@ -1,3 +1,5 @@
+import {Links} from "../Links";
+
 
 export const Profile = () => {
   return (
@@ -6,7 +8,7 @@ export const Profile = () => {
         <div className={"w-full"}>
             <header className={"flex items-center justify-between mb-2"}>
                 <h1 className={"text-2xl font-bold"}>Cameron Williamson</h1>
-                <a href={""}>Link</a>
+                <Links title={"GITHUB"} url={""}/>
             </header>
             <p>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</p>
             <ul className={"flex gap-4 mt-6"}>

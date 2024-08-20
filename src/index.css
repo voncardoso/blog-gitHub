@@ -2,7 +2,8 @@
 
 @layer base {
     body {
-        @apply bg-base-background text-base-text;
+        @apply bg-base-background text-base-text antialiased;
+        font-family: 'Nunito', sans-serif;
     }
 }
 
