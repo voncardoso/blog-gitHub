@@ -1,7 +1,8 @@
 import {Meta, StoryObj} from '@storybook/react';
-import { Profile } from "../../components/Profile";
+import {Profile} from "../../components/Profile";
 import {Links} from "../../components/Links";
-
+import {PositionIcon} from "../../enums/PositionIcon.ts";
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 interface ProfileArgs {
     title: string;
     description: string;
@@ -90,8 +91,8 @@ export const NoDescription: StoryObj<ProfileArgs>  = {
         <Profile.Root>
             <Profile.Content>
                 <Profile.Header>
-                    <Links title={"GITHUB"} url={""}/>
-                    <Links title={"GITHUB"} url={""}/>
+                    <Links title={"voltar"} url={""} positionIcon={PositionIcon.Left} icon={faChevronLeft}/>
+                    <Links title={"github"} url={""}/>
                 </Profile.Header>
                 <Profile.Title title={title}/>
                 <Profile.Footer>

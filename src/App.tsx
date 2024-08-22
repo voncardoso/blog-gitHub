@@ -1,7 +1,7 @@
-import { Header } from "./components/Header";
 import {Profile} from "./components/Profile";
-
+import {PositionIcon} from "./enums/PositionIcon.ts";
 import {Links} from "./components/Links";
+import { Header } from "./components/Header";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
                 <Profile.Content>
                     <Profile.Header>
                         <Profile.Title title="Cameron Williamson"/>
-                        <Links title={"GITHUB"} url={""}/>
+                        <Links title={"github"} url={""} positionIcon={PositionIcon.Right} />
                     </Profile.Header>
                     <Profile.Description
                         description="
