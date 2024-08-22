@@ -1,11 +1,9 @@
 @tailwind base;
-
 @layer base {
     body {
         @apply bg-base-background text-base-text antialiased;
         font-family: 'Nunito', sans-serif;
     }
 }
-
 @tailwind components;
 @tailwind utilities;

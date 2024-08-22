@@ -5,7 +5,6 @@ import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 interface LinksProps {
     title: string;
     url: string;
-
 }
 
 export const Links: FunctionComponent<LinksProps> = ({ title, url }) => {
