@@ -12,8 +12,8 @@ interface LinksProps {
     icon?: IconDefinition;
 }
 
-export const Links: FunctionComponent<LinksProps> = ({ title, url, positionIcon, icon  = faUpRightFromSquare }) => {
-    const className = cn("text-xs uppercase font-bold leading-160 text-blue hover:border-b hover:border-blue flex items-center gap-2", positionIcon === "left" && "flex-row-reverse")
+export const Links: FunctionComponent<LinksProps> = ({ title, url, positionIcon = PositionIcon.Right, icon  = faUpRightFromSquare }) => {
+    const className = cn("w-fit text-xs uppercase font-bold leading-160 text-blue hover:border-b hover:border-blue flex items-center gap-2", positionIcon === "left" && "flex-row-reverse")
     return (
             <a href={url} className={className}>
                 {title} <FontAwesomeIcon size={"sm"} icon={icon}/>
