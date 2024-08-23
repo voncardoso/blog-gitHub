@@ -1,5 +1,5 @@
 import ImgHeader from "../../assets/cover_2x.png";
-import {Profile} from "../Profile";
+
 export const Header = () => {
   return (
     <header

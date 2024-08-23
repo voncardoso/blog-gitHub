@@ -1,12 +1,12 @@
-import {FunctionComponent} from "react";
+import {FunctionComponent, ReactNode} from "react";
 
 interface HeaderProps {
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 const Header: FunctionComponent<HeaderProps> = ({children}) => {
     return (
-        <header className="flex items-center justify-between mb-2">
+        <header className="flex items-start justify-between mb-2">
             {children}
         </header>
     )

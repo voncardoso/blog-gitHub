@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import {InfoIcons} from "./components/InfoIcons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import { faBuilding, faUserGroup } from '@fortawesome/free-solid-svg-icons'
+import {Input} from "./components/Form/Input.tsx";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
                 </Profile.Content>
             </Profile.Root>
         </div>
+        <Input placeholder="Buscar conteudo" />
     </>
   )
 }
