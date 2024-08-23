@@ -3,7 +3,7 @@ import {Input} from "../../components/Form/Input.tsx";
 
 
 const meta: Meta ={
-    title: 'Components/Input',
+    title: 'Form/Input',
     component: Input,
     args: {
         placeholder: 'Placeholder',
