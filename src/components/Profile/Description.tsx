@@ -5,7 +5,7 @@ interface DescriptionProps {
 }
 const Description: FunctionComponent<DescriptionProps> = ({description}) => {
     return (
-        <p className="h-[75px]">{description}</p>
+        <p className="min-h-[60px] max-h-[400px] overflow-auto scrollbar-custom ">{description}</p>
     );
 }
 

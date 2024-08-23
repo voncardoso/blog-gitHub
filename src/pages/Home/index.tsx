@@ -10,8 +10,8 @@ import useHome from "./userHome.controller.tsx";
 
 
 export const Home = () => {
-    const {profile} = useHome()
-    console.log(profile)
+    const {profile, issues} = useHome()
+    console.log(issues)
    if(profile){
        return (
            <main>
@@ -35,14 +35,24 @@ export const Home = () => {
                            </Profile.Content>
                        </Profile.Root>
                    </div>
-                   <Input placeholder="Buscar conteudo"/>
-                   <Card
-                       title="JavaScript data types and data structures"
-                       time="Há 1 dia"
-                       description="Programming languages all have built-in data structures,
-                     but these often differ from one language to another. This article attempts to
-                     list the built-in data structures available in "
-                   />
+                   <div className="flex flex-col gap-3">
+                       <header className="flex items-center justify-between">
+                           <strong className="text-lg">Publicações</strong>
+                           <span  className="text-sm text-base-span">{issues?.length} publicações</span>
+                       </header>
+                       <Input placeholder="Buscar conteudo"/>
+                   </div>
+                  <div className="grid grid-cols-2 gap-8 mt-12 mb-60">
+                      {issues?.map((issue) => (
+                          <Card
+                              key={issue.id}
+                              title={issue.title}
+                              time="Há 1 dia"
+                              description={issue.body}
+                          />
+                      ))}
+
+                  </div>
                </section>
            </main>
        )

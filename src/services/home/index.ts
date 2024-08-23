@@ -1,8 +1,9 @@
-import {useProfile} from "./service.ts";
+import {useProfile, useReposIssues} from "./service.ts";
 
 const HomeServices =() => {
     return {
         useProfile,
+        useReposIssues,
     }
 }
 

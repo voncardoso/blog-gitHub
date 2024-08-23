@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import {fetchData} from "../../utils/fetch.ts";
-import {UserProfile} from "./@types.ts";
+import {Issue, UserProfile} from "./@types.ts";
 
 export const useProfile = () => {
     const { data, isLoading } = useQuery({
@@ -10,6 +10,18 @@ export const useProfile = () => {
 
     return {
         profile: data,
+        loading: isLoading
+    }
+}
+
+export const useReposIssues = () => {
+    const { data, isLoading } = useQuery({
+        queryKey: ['issues'],
+        queryFn: () => fetchData<Issue[]>('repos/voncardoso/blog-gitHub/issues'),
+    });
+
+    return {
+        issues: data,
         loading: isLoading
     }
 }

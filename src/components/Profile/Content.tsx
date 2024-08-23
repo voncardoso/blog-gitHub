@@ -6,7 +6,7 @@ interface ContentProps {
 
 const ContentProfile: FunctionComponent<ContentProps> = ({children}) => {
    return (
-       <div className="h-full w-full flex flex-col  justify-start">
+       <div className="h-full w-full flex flex-col  gap-2">
            {children}
        </div>
    )
