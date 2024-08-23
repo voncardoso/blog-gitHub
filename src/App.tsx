@@ -2,6 +2,9 @@ import {Profile} from "./components/Profile";
 import {PositionIcon} from "./enums/PositionIcon.ts";
 import {Links} from "./components/Links";
 import { Header } from "./components/Header";
+import {InfoIcons} from "./components/InfoIcons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import { faBuilding, faUserGroup } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
@@ -23,14 +26,9 @@ function App() {
                         Nunc, volutpat pulvinar vel mass."
                     />
                     <Profile.Footer>
-                        <div>
-                            <img src={""} alt=""/>
-                            <p>5 completados</p>
-                        </div>
-                        <div>
-                            <img src={""} alt=""/>
-                            <p>5 completados</p>
-                        </div>
+                        <InfoIcons size={"2xl"} title={"cameronwll"}  icon={faGithub} />
+                        <InfoIcons size={"sm"} title={"Rocketseat"} icon={faBuilding} />
+                        <InfoIcons size={"sm"} title={"seguidores"} icon={faUserGroup} />
                     </Profile.Footer>
                 </Profile.Content>
             </Profile.Root>
