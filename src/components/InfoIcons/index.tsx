@@ -11,7 +11,7 @@ interface InfoIconsProps extends FontAwesomeIconProps {
 
 export const InfoIcons: FunctionComponent<InfoIconsProps> = ({title,  icon, ...props}) =>{
     return (
-        <div className="w-fit flex items-center gap-2 text-base-label">
+        <div className="w-fit flex items-center justify-center gap-2 text-base-label">
             <FontAwesomeIcon icon={icon}  {...props}/>
             <p className="text-base-subtitle">{title}</p>
         </div>

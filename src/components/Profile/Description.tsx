@@ -5,7 +5,7 @@ interface DescriptionProps {
 }
 const Description: FunctionComponent<DescriptionProps> = ({description}) => {
     return (
-        <p>{description}</p>
+        <p className="h-[75px]">{description}</p>
     );
 }
 

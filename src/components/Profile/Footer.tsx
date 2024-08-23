@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer: FunctionComponent<FooterProps> = ({children}) => {
    return (
-         <footer className="flex gap-4 mt-6">
+         <footer className="flex gap-4">
               {children}
          </footer>
    )

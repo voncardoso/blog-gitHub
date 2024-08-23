@@ -2,7 +2,10 @@ import {Meta, StoryObj} from '@storybook/react';
 import {Profile} from "../../components/Profile";
 import {Links} from "../../components/Links";
 import {PositionIcon} from "../../enums/PositionIcon.ts";
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import {faBuilding, faChevronLeft, faUserGroup} from '@fortawesome/free-solid-svg-icons'
+import {InfoIcons} from "../../components/InfoIcons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+
 interface ProfileArgs {
     title: string;
     description: string;
@@ -38,14 +41,9 @@ export const Default: StoryObj<ProfileArgs> = {
                         description={description}
                     />
                     <Profile.Footer>
-                        <div>
-                            <img src={""} alt=""/>
-                            <p>5 completados</p>
-                        </div>
-                        <div>
-                            <img src={""} alt=""/>
-                            <p>5 completados</p>
-                        </div>
+                        <InfoIcons size={"2xl"} title={"cameronwll"} icon={faGithub}/>
+                        <InfoIcons size={"sm"} title={"Rocketseat"} icon={faBuilding}/>
+                        <InfoIcons size={"sm"} title={"seguidores"} icon={faUserGroup}/>
                     </Profile.Footer>
                 </Profile.Content>
             </Profile.Root>
@@ -67,14 +65,9 @@ export const NoImage: StoryObj<ProfileArgs> = {
                     description={description}
                 />
                 <Profile.Footer>
-                    <div>
-                        <img src={""} alt=""/>
-                        <p>5 completados</p>
-                    </div>
-                    <div>
-                        <img src={""} alt=""/>
-                        <p>5 completados</p>
-                    </div>
+                    <InfoIcons size={"2xl"} title={"cameronwll"} icon={faGithub}/>
+                    <InfoIcons size={"sm"} title={"Rocketseat"} icon={faBuilding}/>
+                    <InfoIcons size={"sm"} title={"seguidores"} icon={faUserGroup}/>
                 </Profile.Footer>
             </Profile.Content>
         </Profile.Root>
@@ -96,14 +89,9 @@ export const NoDescription: StoryObj<ProfileArgs>  = {
                 </Profile.Header>
                 <Profile.Title title={title}/>
                 <Profile.Footer>
-                    <div>
-                        <img src={""} alt=""/>
-                        <p>5 completados</p>
-                    </div>
-                    <div>
-                        <img src={""} alt=""/>
-                        <p>5 completados</p>
-                    </div>
+                    <InfoIcons size={"2xl"} title={"cameronwll"} icon={faGithub}/>
+                    <InfoIcons size={"sm"} title={"Rocketseat"} icon={faBuilding}/>
+                    <InfoIcons size={"sm"} title={"seguidores"} icon={faUserGroup}/>
                 </Profile.Footer>
             </Profile.Content>
         </Profile.Root>
