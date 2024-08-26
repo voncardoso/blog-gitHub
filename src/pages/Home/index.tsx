@@ -14,8 +14,7 @@ export const Home = () => {
 
    if(profile){
        return (
-           <main className="w-full max-w-[864px] m-auto">
-
+           <main className="w-full max-w-[864px] m-auto p-2 ">
                    <div className={"relative top-[-90px]"}>
                        <Profile.Root>
                            <Profile.Image src={profile.avatar_url} alt="profile"/>
@@ -46,7 +45,7 @@ export const Home = () => {
                             onChange={(e) => setSearch(e.target.value)}
                        />
                    </div>
-                  <div className="grid grid-cols-2 gap-8 mt-12 mb-60">
+                  <div className="grid grid-cols-1 gap-8 mt-12 mb-60 md:grid-cols-2 md:w-full">
                       {issues?.map((issue) => (
                           <Card
                               key={issue.id}
