@@ -10,12 +10,12 @@ import useHome from "./userHome.controller.tsx";
 
 
 export const Home = () => {
-    const {profile, issues} = useHome()
-    console.log(issues)
+    const {profile, issues, totalIssues, search, setSearch, goToNextPage} = useHome()
+
    if(profile){
        return (
-           <main>
-               <section className="w-full max-w-[864px] m-auto">
+           <main className="w-full max-w-[864px] m-auto">
+
                    <div className={"relative top-[-90px]"}>
                        <Profile.Root>
                            <Profile.Image src={profile.avatar_url} alt="profile"/>
@@ -38,9 +38,13 @@ export const Home = () => {
                    <div className="flex flex-col gap-3">
                        <header className="flex items-center justify-between">
                            <strong className="text-lg">Publicações</strong>
-                           <span  className="text-sm text-base-span">{issues?.length} publicações</span>
+                           <span  className="text-sm text-base-span">{totalIssues} publicações</span>
                        </header>
-                       <Input placeholder="Buscar conteudo"/>
+                       <Input
+                           placeholder="Buscar conteudo"
+                           value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                       />
                    </div>
                   <div className="grid grid-cols-2 gap-8 mt-12 mb-60">
                       {issues?.map((issue) => (
@@ -49,11 +53,12 @@ export const Home = () => {
                               title={issue.title}
                               time="Há 1 dia"
                               description={issue.body}
+                              onCLick={() => goToNextPage(issue.number)}
                           />
                       ))}
 
                   </div>
-               </section>
+
            </main>
        )
    }

@@ -97,3 +97,9 @@ export interface Issue {
     performed_via_github_app: any | null;
     state_reason: string | null;
 }
+
+export interface repository {
+    total_count: number,
+    incomplete_results: boolean,
+    items: Issue[]
+}
